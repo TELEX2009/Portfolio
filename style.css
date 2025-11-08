@@ -351,3 +351,11 @@ body.dark-mode {
   border-radius: 50%;
   cursor: pointer;
 }
+@font-face {
+    font-family: 'Algerian';
+    src: url('algerian.TTF') format('truetype');
+}
+
+header {
+    font-family: 'Algerian', sans-serif;
+}

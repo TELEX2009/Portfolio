@@ -59,7 +59,7 @@ ul {
 }
 
 .achievements {
-    
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
@@ -230,7 +230,7 @@ header {
     border-bottom: 2px solid #e0e0e0;
 }
 
-.tech-logos {
+/*.tech-logos {
     position: absolute;
     bottom: 10px;
     left: 20px;
@@ -278,7 +278,7 @@ header {
     right: 20px;
     display: flex;
     gap: 30px;
-}
+}*/
 
 /* 🔗 Github And Insta ons section */
 .social-links {

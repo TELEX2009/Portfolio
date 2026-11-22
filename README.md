@@ -28,7 +28,7 @@ stack   → Python · HTML/CSS · JS · Data Science
 status  → building, gaming, leveling up
 ```
 
-A personal portfolio built from scratch with **plain HTML, CSS and JavaScript** — no frameworks, no build step. Every section is styled like a terminal window, and the whole site works on phones and desktops.
+A personal portfolio, showcasing 6 projects, built from scratch with **plain HTML, CSS and JavaScript** — no frameworks, no build step. Every section is styled like a terminal window, and the whole site works on phones and desktops.
 
 ## ✨ Features
 
@@ -52,8 +52,11 @@ A personal portfolio built from scratch with **plain HTML, CSS and JavaScript** 
 
 | Project | Stack | Links |
 |---|---|---|
-| **student-portfolio-website** | HTML · CSS · JS | [Live](https://telex2009.github.io/Portfolio/) |
+| **student-portfolio-website** | HTML · CSS · JS | [Live](https://telex2009.github.io/Portfolio/) · [Source](https://github.com/TELEX2009/Portfolio) |
+| **crimora-scientific-calculator** 👑 | HTML · CSS · JS | [Live](https://telex2009.github.io/Crimora-Calculator/) · [Source](https://github.com/TELEX2009/Crimora-Calculator) |
 | **smartlist-generator-web** | HTML · CSS · JS | [Live](https://telex2009.github.io/Smartlist/) · [Source](https://github.com/TELEX2009/Smartlist) |
+| **stockpilot-inventory-billing** | React · TypeScript · Tailwind · Supabase | [Live](https://stockpilotss.netlify.app/) · 🔒 Private source |
+| **sakura-nova-ecommerce** 🌸 | React · TypeScript · Express · Supabase | [Live](https://store-web-m4lu.onrender.com/) · 🔒 Private source |
 | **python-calculator-app** | Python · GUI | 🔒 Private |
 
 ## 🛠️ Run it locally

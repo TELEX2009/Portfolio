@@ -931,6 +931,44 @@
   .status-chip.private::before{background:var(--red); box-shadow:0 0 8px var(--red);}
 
   @media(prefers-reduced-motion:reduce){.petals span,.out-key{animation:none !important;}}
+
+  /* StockPilot preview (indigo #4f46e5) */
+  .sp-app{display:flex; width:min(440px,100%); height:150px; border-radius:10px; overflow:hidden; background:#0f1226; border:1px solid #2a2f5a; font-family:var(--sans); box-shadow:0 14px 34px -10px rgba(0,0,0,.6);}
+  .sp-side{width:104px; flex:0 0 104px; padding:10px 8px; background:linear-gradient(180deg,#4f46e5,#3730a3); display:flex; flex-direction:column; gap:5px; color:#e0e0ff; font-size:9.5px;}
+  .sp-side b{font-size:10.5px; color:#fff; margin-bottom:6px; font-weight:800;}
+  .sp-side span{padding:4px 7px; border-radius:6px; opacity:.8;}
+  .sp-side span.on{background:rgba(255,255,255,.18); opacity:1; font-weight:700;}
+  .sp-main{flex:1; min-width:0; padding:10px; display:flex; flex-direction:column; gap:9px;}
+  .sp-kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
+  .sp-kpis div{background:#171b3a; border:1px solid #2a2f5a; border-radius:7px; padding:6px 7px;}
+  .sp-kpis small{display:block; font-size:8.5px; color:#9aa3d9; margin-bottom:5px;}
+  .sp-kpis i{display:block; height:7px; width:60%; border-radius:4px; background:linear-gradient(90deg,#818cf8,#c4b5fd);}
+  .sp-kpis i.warn{background:linear-gradient(90deg,#fbbf24,#f87171); width:38%;}
+  .sp-chart{flex:1; display:flex; align-items:flex-end; gap:7px; padding:6px 8px 0; border:1px solid #2a2f5a; border-radius:7px; background:#171b3a;}
+  .sp-chart span{flex:1; height:var(--h); border-radius:4px 4px 0 0; background:linear-gradient(180deg,#818cf8,#4f46e5); transform-origin:bottom; animation:spbar 4.5s ease-in-out infinite;}
+  .sp-chart span:nth-child(2n){animation-delay:.4s;} .sp-chart span:nth-child(3n){animation-delay:.9s;}
+  @keyframes spbar{0%,100%{transform:scaleY(1);}50%{transform:scaleY(.7);}}
+  @media(max-width:480px){.sp-side{width:76px; flex-basis:76px; font-size:8.5px;} .sp-app{height:140px;}}
+  @media(prefers-reduced-motion:reduce){.sp-chart span{animation:none !important;}}
+
+  /* Sakura Nova preview */
+  .sn-app{position:relative; width:min(420px,100%); border-radius:10px; overflow:hidden; background:#1a1030; border:1px solid #4a3380; font-family:var(--sans); box-shadow:0 14px 34px -10px rgba(0,0,0,.6);}
+  .sn-nav{display:flex; align-items:center; gap:12px; padding:8px 12px; background:#221445; font-size:9.5px; color:#d9c7ff;}
+  .sn-nav b{margin-right:auto; color:#ffb3d6; font-size:11px;}
+  .sn-cart{padding:3px 9px; border-radius:999px; background:#ff7eb9; color:#2a0a1c; font-weight:700;}
+  .sn-hero{position:relative; padding:16px 14px; overflow:hidden; background:linear-gradient(120deg,#ff7eb9,#a78bfa 60%,#7fd8ff);}
+  .sn-hero em{display:block; font-style:normal; font-weight:800; font-size:13px; color:#2a0a1c; max-width:62%; line-height:1.25;}
+  .sn-hero i{display:inline-block; margin-top:8px; font-style:normal; font-size:9.5px; font-weight:700; padding:4px 11px; border-radius:999px; background:#2a0a1c; color:#ffd1e6;}
+  .sn-hero u{position:absolute; top:-12px; width:10px; height:10px; border-radius:150% 0 150% 0; background:rgba(255,255,255,.75); animation:snfall 5s linear infinite;}
+  .sn-hero u:nth-of-type(1){left:62%;} .sn-hero u:nth-of-type(2){left:78%; animation-delay:1.7s;} .sn-hero u:nth-of-type(3){left:90%; animation-delay:3.2s;}
+  @keyframes snfall{to{transform:translate(-26px,95px) rotate(300deg);}}
+  .sn-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:10px 12px 6px;}
+  .sn-grid div{background:#241648; border:1px solid #4a3380; border-radius:7px; padding:6px;}
+  .sn-grid span{display:block; height:34px; border-radius:5px; background:linear-gradient(135deg,#7fd8ff55,#ff7eb955);}
+  .sn-grid small{display:block; height:5px; width:65%; margin-top:6px; border-radius:3px; background:#ff7eb9;}
+  .sn-cod{margin:4px 12px 10px; font-size:9px; color:#8cf5c8; text-align:right;}
+  .sn-cod::before{content:"● "; }
+  @media(prefers-reduced-motion:reduce){.sn-hero u{animation:none !important;}}
 </style>
 </head>
 <body>
@@ -1077,18 +1115,19 @@
       </div>
 
       <div class="project-card">
-        <div class="project-preview" role="img" aria-label="Terminal-style preview showing a calculator app interface">
-          <div class="project-preview-bar"><span class="dots"><span></span><span></span><span></span></span><span class="preview-file">sridhar@python: ~/calculator-app</span></div>
-          <div class="project-preview-screen"><div class="preview-calculator">
-            <div class="calculator-display">1,024<span style="color:#7b88a7;font-size:11px"> .00</span></div>
-            <div class="calculator-keys"><span>AC</span><span>±</span><span>%</span><span class="operator">÷</span><span>7</span><span>8</span><span>9</span><span class="operator">×</span><span>4</span><span>5</span><span>6</span><span class="operator">−</span><span>1</span><span>2</span><span>3</span><span class="operator">+</span></div>
+        <div class="project-preview" role="img" aria-label="Preview of the Crimora scientific calculator with a crimson glass interface">
+          <div class="project-preview-bar"><span class="dots"><span></span><span></span><span></span></span><span class="preview-file">telex2009.github.io/Crimora-Calculator</span></div>
+          <div class="project-preview-screen" style="background:radial-gradient(60% 80% at 20% 20%,rgba(255,45,95,.3),transparent 70%),#16070d"><div class="preview-calculator" style="border-color:#ff2d5f66;background:rgba(34,12,20,.85)">
+            <div class="calculator-display"><span style="color:#ff2d5f;font-size:11px;font-style:italic">👑 Crimora</span><br>3.14159</div>
+            <div class="calculator-keys"><span>sin</span><span>cos</span><span>π</span><span class="operator">÷</span><span>7</span><span>8</span><span>9</span><span class="operator">×</span><span>4</span><span>5</span><span>6</span><span class="operator">−</span><span>1</span><span>2</span><span>3</span><span class="operator">+</span></div>
           </div></div>
         </div>
-        <div class="project-head"><span class="name">python-calculator-app</span><span class="status-chip private">private</span></div>
-        <p>A graphical user interface calculator built for beginners, focused on clean logic and simple input handling.</p>
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">GUI</span></div>
+        <div class="project-head"><span class="name">crimora-scientific-calculator</span><span class="status-chip">live</span></div>
+        <p>A stylish anime-inspired scientific calculator in a single HTML file, with six themes, custom wallpapers, glass UI, history and Deg/Rad support.</p>
+        <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
         <div class="project-actions">
-          <span class="pbtn error" aria-disabled="true" title="Source code is private"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg>Private Source</span>
+          <a class="pbtn primary" href="https://telex2009.github.io/Crimora-Calculator/" target="_blank" rel="noopener noreferrer"><span class="live-dot"></span>View Live<svg class="pi arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="pbtn" href="https://github.com/TELEX2009/Crimora-Calculator" target="_blank" rel="noopener noreferrer"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source Code</a>
         </div>
       </div>
 
@@ -1112,6 +1151,45 @@
         <div class="project-actions">
           <a class="pbtn primary" href="https://telex2009.github.io/Smartlist/" target="_blank" rel="noopener noreferrer"><span class="live-dot"></span>View Live<svg class="pi arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="pbtn" href="https://github.com/TELEX2009/Smartlist" target="_blank" rel="noopener noreferrer"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source Code</a>
+        </div>
+      </div>
+    
+      <div class="project-card">
+        <div class="project-preview" role="img" aria-label="Preview of the StockPilot inventory and billing dashboard">
+          <div class="project-preview-bar"><span class="dots"><span></span><span></span><span></span></span><span class="preview-file">stockpilotss.netlify.app</span></div>
+          <div class="project-preview-screen"><div class="sp-app">
+            <div class="sp-side"><b>◆ StockPilot</b><span class="on">Dashboard</span><span>Inventory</span><span>Billing</span><span>Reports</span></div>
+            <div class="sp-main">
+              <div class="sp-kpis"><div><small>Items</small><i></i></div><div><small>Low stock</small><i class="warn"></i></div><div><small>Invoices</small><i></i></div></div>
+              <div class="sp-chart"><span style="--h:42%"></span><span style="--h:68%"></span><span style="--h:52%"></span><span style="--h:85%"></span><span style="--h:60%"></span><span style="--h:94%"></span><span style="--h:74%"></span></div>
+            </div>
+          </div></div>
+        </div>
+        <div class="project-head"><span class="name">stockpilot-inventory-billing</span><span class="status-chip">live</span></div>
+        <p>An inventory and billing web app with Admin, Manager and Staff roles, multi-store support, sales charts and PDF invoices.</p>
+        <div class="tag-row"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Supabase</span></div>
+        <div class="project-actions">
+          <a class="pbtn primary" href="https://stockpilotss.netlify.app/" target="_blank" rel="noopener noreferrer"><span class="live-dot"></span>View Live<svg class="pi arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <span class="pbtn error" aria-disabled="true" title="Source code is private"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg>Private Source</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview" role="img" aria-label="Preview of the Sakura Nova anime store homepage">
+          <div class="project-preview-bar"><span class="dots"><span></span><span></span><span></span></span><span class="preview-file">store-web-m4lu.onrender.com</span></div>
+          <div class="project-preview-screen"><div class="sn-app">
+            <div class="sn-nav"><b>🌸 Sakura Nova</b><span>Shop</span><span>New</span><span class="sn-cart">Cart</span></div>
+            <div class="sn-hero"><em>Premium anime-inspired merch</em><i>Shop now</i><u></u><u></u><u></u></div>
+            <div class="sn-grid"><div><span></span><small></small></div><div><span></span><small></small></div><div><span></span><small></small></div></div>
+            <div class="sn-cod">Cash on Delivery</div>
+          </div></div>
+        </div>
+        <div class="project-head"><span class="name">sakura-nova-ecommerce</span><span class="status-chip">live</span></div>
+        <p>A premium anime-inspired e-commerce store with a full shop, admin dashboard and Cash on Delivery checkout.</p>
+        <div class="tag-row"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Express</span><span class="tag">Supabase</span></div>
+        <div class="project-actions">
+          <a class="pbtn primary" href="https://store-web-m4lu.onrender.com/" target="_blank" rel="noopener noreferrer"><span class="live-dot"></span>View Live<svg class="pi arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <span class="pbtn error" aria-disabled="true" title="Source code is private"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg>Private Source</span>
         </div>
       </div>
     </div>

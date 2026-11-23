@@ -6,7 +6,7 @@
 
 *Class 12 student · Vibe coder · Python · Web · Data Science*
 
-<a href="https://telex2009.github.io/Portfolio/"><img src="https://img.shields.io/badge/▶_LIVE_DEMO-6ea8fe?style=for-the-badge&labelColor=0b0f1a" alt="Live demo"></a>
+<a href="https://portfolio-sridhars.netlify.app/"><img src="https://img.shields.io/badge/▶_LIVE_DEMO-6ea8fe?style=for-the-badge&labelColor=0b0f1a" alt="Live demo"></a>
 <a href="https://github.com/TELEX2009"><img src="https://img.shields.io/badge/GitHub-TELEX2009-ff6ec7?style=for-the-badge&logo=github&logoColor=white&labelColor=0b0f1a" alt="GitHub"></a>
 
 ![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white)
@@ -28,7 +28,7 @@ stack   → Python · HTML/CSS · JS · Data Science
 status  → building, gaming, leveling up
 ```
 
-A personal portfolio, showcasing 6 projects, built from scratch with **plain HTML, CSS and JavaScript** — no frameworks, no build step. Every section is styled like a terminal window, and the whole site works on phones and desktops.
+A personal portfolio, showcasing 5 projects, built from scratch with **plain HTML, CSS and JavaScript** — no frameworks, no build step. Every section is styled like a terminal window, and the whole site works on phones and desktops.
 
 ## ✨ Features
 
@@ -52,12 +52,11 @@ A personal portfolio, showcasing 6 projects, built from scratch with **plain HTM
 
 | Project | Stack | Links |
 |---|---|---|
-| **student-portfolio-website** | HTML · CSS · JS | [Live](https://telex2009.github.io/Portfolio/) · [Source](https://github.com/TELEX2009/Portfolio) |
-| **crimora-scientific-calculator** 👑 | HTML · CSS · JS | [Live](https://telex2009.github.io/Crimora-Calculator/) · [Source](https://github.com/TELEX2009/Crimora-Calculator) |
+| **student-portfolio-website** | HTML · CSS · JS | [Live](https://portfolio-sridhars.netlify.app/) · [Source](https://github.com/TELEX2009/Portfolio) |
 | **smartlist-generator-web** | HTML · CSS · JS | [Live](https://telex2009.github.io/Smartlist/) · [Source](https://github.com/TELEX2009/Smartlist) |
 | **stockpilot-inventory-billing** | React · TypeScript · Tailwind · Supabase | [Live](https://stockpilotss.netlify.app/) · 🔒 Private source |
 | **sakura-nova-ecommerce** 🌸 | React · TypeScript · Express · Supabase | [Live](https://store-web-m4lu.onrender.com/) · 🔒 Private source |
-| **python-calculator-app** | Python · GUI | 🔒 Private |
+| **crimora-scientific-calculator** 👑 | HTML · CSS · JS | [Live](https://crimora-calculator.netlify.app/) · [Source](https://github.com/TELEX2009/Crimora-Calculator) |
 
 ## 🛠️ Run it locally
 
